@@ -64,9 +64,11 @@ namespace DatingApp.API.Data
              return true;
         }
 
-        public Task<bool> CheckUser(string username)
+        public async Task<bool> CheckUser(string username)
         {
-            throw new System.NotImplementedException();
+            if(await _context.Users.AnyAsync(x => x.Name == username))
+                return true;
+            return false;
         }
     }
 }
