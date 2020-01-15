@@ -22,7 +22,7 @@ namespace DatingApp.API
        
         public Startup(IConfiguration configuration)
         {
-            this.Configuration = configuration;
+            Configuration = configuration;
 
         }
         public IConfiguration Configuration { get; }
@@ -31,7 +31,7 @@ namespace DatingApp.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<DataContext>(x => x.UseSqlite(Configuration.GetConnectionString("Defaultconnection")));
-             services.AddRazorPages();
+             services.AddControllers();
              services.AddCors();
         }
 
@@ -44,22 +44,17 @@ namespace DatingApp.API
             {
                 app.UseDeveloperExceptionPage();
             }
-           else
-            {
-                app.UseExceptionHandler("/Error");
-                app.UseHsts();
-            }
-            //order is important
-            //app.UseHttpsRedirection();
-
+          
+            app.UseHttpsRedirection();
 
             app.UseRouting();
             app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapRazorPages();
+                endpoints.MapControllers();
             });
         }
     }
