@@ -42,7 +42,7 @@ namespace DatingApp.API.Data
 
         public async Task<User> LogIn(string username, string password)
         {
-            var user = await _context.Users.FirstOrDefaultAsync(x => x.Name == username);
+            var user = await _context.Users.FirstOrDefaultAsync(x => x.UserName == username);
             if(user == null)
                 return null;
             if(!VerifyPasswordHash(password, user.PasswordSalt, user.PasswordHash))
@@ -66,7 +66,7 @@ namespace DatingApp.API.Data
 
         public async Task<bool> CheckUser(string username)
         {
-            if(await _context.Users.AnyAsync(x => x.Name == username))
+            if(await _context.Users.AnyAsync(x => x.UserName == username))
                 return true;
             return false;
         }
