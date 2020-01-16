@@ -28,7 +28,7 @@ namespace DatingApp.API.Controllers
                 return BadRequest("Username Already Exists");
             var userToCreate = new User
             {
-                UserName = username
+                Name = username
             };
 
             var createdUser = await _repo.SignUp(userToCreate, password);
