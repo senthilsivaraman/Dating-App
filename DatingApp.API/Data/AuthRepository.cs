@@ -14,8 +14,6 @@ namespace DatingApp.API.Data
         }
        
 
-       
-
         public async Task<User> SignUp(User user, string password)
         {
             byte[] passwordHash, passwordSalt;
@@ -66,9 +64,9 @@ namespace DatingApp.API.Data
 
         public async Task<bool> CheckUser(string username)
         {
-            if(await _context.Users.AnyAsync(x => x.Name == username))
-                return true;
-            return false;
+            if (await _context.Users.AnyAsync(x => x.Name == username))
+                return false;
+            return true;
         }
     }
 }

@@ -17,9 +17,6 @@ namespace DatingApp.API
 {
     public class Startup
     {
-
-
-       
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -30,7 +27,7 @@ namespace DatingApp.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<DataContext>(x => x.UseSqlite(Configuration.GetConnectionString("Defaultconnection")));
+             services.AddDbContext<DataContext>(x => x.UseSqlite(Configuration.GetConnectionString("Defaultconnection")));
              services.AddControllers();
              services.AddCors();
              services.AddScoped<IAuthRepository, AuthRepository>();
@@ -47,10 +44,9 @@ namespace DatingApp.API
             }
           
             app.UseHttpsRedirection();
-
             app.UseRouting();
             app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
-
+            app.UseAuthentication ( );
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

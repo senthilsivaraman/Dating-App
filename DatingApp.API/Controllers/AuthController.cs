@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DatingApp.API.Data;
+using DatingApp.API.DTO;
 using DatingApp.API.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -21,17 +22,17 @@ namespace DatingApp.API.Controllers
         }
 
         [HttpPost("signup")]
-        public async Task<IActionResult> SignUp(string username, string password)
+        public async Task<IActionResult> SignUp(UserForSignUpDTO userForRegisterDTO )
         {
-            username = username.ToLower();
-            if(await _repo.CheckUser(username))
+            userForRegisterDTO.Name = userForRegisterDTO.Name.ToLower();
+            if(await _repo.CheckUser(userForRegisterDTO.Name))
                 return BadRequest("Username Already Exists");
             var userToCreate = new User
             {
-                Name = username
+                Name = userForRegisterDTO.Name
             };
 
-            var createdUser = await _repo.SignUp(userToCreate, password);
+            var createdUser = await _repo.SignUp(userToCreate, userForRegisterDTO.Password);
             return StatusCode(201);
         }
 
