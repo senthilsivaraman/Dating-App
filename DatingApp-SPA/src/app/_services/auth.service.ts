@@ -21,4 +21,8 @@ export class AuthService {
       })
     ); // pipe is for manging the created token
   }
+
+  register(model: any) {
+    return this.http.post(this.baseUrl + 'signup', model);
+  }
 }
