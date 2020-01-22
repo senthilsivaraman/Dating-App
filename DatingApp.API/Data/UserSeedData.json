@@ -1,0 +1,162 @@
+[
+    {
+        "Username": "Maria",
+        "Password": "password",
+        "KnownAs": "Maria",
+        "Email": "mariajoyner@boilcat.com",
+        "Gender": "female",
+        "Dob": "2002-09-28",
+        "AccCreated": "2019-10-04",
+        "Photos": [
+            {
+                "url": "https://randomuser.me/api/portraits/women/61.jpg",
+                "isMain": true,
+                "description": "Quis enim cupidatat laborum nostrud veniam dolor sit occaecat cupidatat dolore reprehenderit enim ullamco."
+            }
+        ]
+    },
+    {
+        "Username": "Natalia",
+        "Password": "password",
+        "KnownAs": "Natalia",
+        "Email": "nataliajoyner@boilcat.com",
+        "Gender": "female",
+        "Dob": "1968-01-18",
+        "AccCreated": "2019-08-17",
+        "Photos": [
+            {
+                "url": "https://randomuser.me/api/portraits/women/84.jpg",
+                "isMain": true,
+                "description": "Exercitation excepteur consectetur ullamco deserunt eu sunt officia duis mollit."
+            }
+        ]
+    },
+    {
+        "Username": "Fannie",
+        "Password": "password",
+        "KnownAs": "Fannie",
+        "Email": "fanniejoyner@boilcat.com",
+        "Gender": "female",
+        "Dob": "1996-08-08",
+        "AccCreated": "2019-03-11",
+        "Photos": [
+            {
+                "url": "https://randomuser.me/api/portraits/women/53.jpg",
+                "isMain": true,
+                "description": "Culpa sint ipsum ut pariatur velit voluptate pariatur fugiat consequat."
+            }
+        ]
+    },
+    {
+        "Username": "Lavonne",
+        "Password": "password",
+        "KnownAs": "Lavonne",
+        "Email": "lavonnejoyner@boilcat.com",
+        "Gender": "female",
+        "Dob": "1981-02-24",
+        "AccCreated": "2019-12-21",
+        "Photos": [
+            {
+                "url": "https://randomuser.me/api/portraits/women/34.jpg",
+                "isMain": true,
+                "description": "Quis eiusmod velit ex ullamco officia nulla labore ea voluptate consequat excepteur nulla consectetur esse."
+            }
+        ]
+    },
+    {
+        "Username": "Krystal",
+        "Password": "password",
+        "KnownAs": "Krystal",
+        "Email": "krystaljoyner@boilcat.com",
+        "Gender": "female",
+        "Dob": "1988-08-10",
+        "AccCreated": "2019-10-16",
+        "Photos": [
+            {
+                "url": "https://randomuser.me/api/portraits/women/93.jpg",
+                "isMain": true,
+                "description": "Consequat cupidatat irure incididunt non incididunt Lorem anim dolore pariatur ullamco sunt anim in."
+            }
+        ]
+    },
+    {
+        "Username": "Williams",
+        "Password": "password",
+        "KnownAs": "Williams",
+        "Email": "williamsjoyner@boilcat.com",
+        "Gender": "male",
+        "Dob": "1969-09-13",
+        "AccCreated": "2020-02-01",
+        "Photos": [
+            {
+                "url": "https://randomuser.me/api/portraits/men/34.jpg",
+                "isMain": true,
+                "description": "Dolore nulla est ullamco cupidatat mollit sint magna pariatur."
+            }
+        ]
+    },
+    {
+        "Username": "Peters",
+        "Password": "password",
+        "KnownAs": "Peters",
+        "Email": "petersjoyner@boilcat.com",
+        "Gender": "male",
+        "Dob": "1995-01-08",
+        "AccCreated": "2019-01-21",
+        "Photos": [
+            {
+                "url": "https://randomuser.me/api/portraits/men/65.jpg",
+                "isMain": true,
+                "description": "Nisi culpa tempor tempor aliqua cupidatat dolor."
+            }
+        ]
+    },
+    {
+        "Username": "Mclean",
+        "Password": "password",
+        "KnownAs": "Mclean",
+        "Email": "mcleanjoyner@boilcat.com",
+        "Gender": "male",
+        "Dob": "1989-08-21",
+        "AccCreated": "2019-04-13",
+        "Photos": [
+            {
+                "url": "https://randomuser.me/api/portraits/men/16.jpg",
+                "isMain": true,
+                "description": "Tempor excepteur officia ullamco irure adipisicing et ullamco ea eu sunt adipisicing qui occaecat."
+            }
+        ]
+    },
+    {
+        "Username": "Mullins",
+        "Password": "password",
+        "KnownAs": "Mullins",
+        "Email": "mullinsjoyner@boilcat.com",
+        "Gender": "male",
+        "Dob": "1999-12-13",
+        "AccCreated": "2019-12-01",
+        "Photos": [
+            {
+                "url": "https://randomuser.me/api/portraits/men/7.jpg",
+                "isMain": true,
+                "description": "Officia veniam et nostrud anim elit."
+            }
+        ]
+    },
+    {
+        "Username": "Mooney",
+        "Password": "password",
+        "KnownAs": "Mooney",
+        "Email": "mooneyjoyner@boilcat.com",
+        "Gender": "male",
+        "Dob": "2003-06-10",
+        "AccCreated": "2019-10-24",
+        "Photos": [
+            {
+                "url": "https://randomuser.me/api/portraits/men/82.jpg",
+                "isMain": true,
+                "description": "Culpa adipisicing tempor exercitation adipisicing commodo culpa reprehenderit do aliqua tempor sit aute laboris."
+            }
+        ]
+    }
+]
