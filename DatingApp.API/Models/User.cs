@@ -15,8 +15,15 @@ namespace DatingApp.API.Models
         public DateTime Dob { get; set; } 
         public DateTime AccCreated { get; set; }    
         public DateTime LastSeen { get; set; }  
-
         public ICollection<Photo> Photos { get; set; }
+
+        public string CurrentCity { get; set; }
+        public string RaisedCity { get; set; }
+        public string Religion { get; set; }
+        public string Bio { get; set; }
+        public string RelationshipStatus { get; set; }
+        public string LookingFor { get; set; }
+        public string InterestedIn { get; set; }
 
     }
 }
