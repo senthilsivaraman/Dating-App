@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DatingApp.API.Controllers
 {
@@ -24,6 +25,7 @@ namespace DatingApp.API.Controllers
             _repo = repo;    
         }
 
+  
         [HttpPost("signup")]
         public async Task<IActionResult> SignUp(UserForSignUpDTO registerDTO )
         {
@@ -42,6 +44,7 @@ namespace DatingApp.API.Controllers
             return StatusCode(201);
         }
 
+            
         [HttpPost("login")]
         public async Task<IActionResult> LogIn(UserForSignInDTO signInDTO )
         {

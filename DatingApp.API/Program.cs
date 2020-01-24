@@ -31,7 +31,6 @@ namespace DatingApp.API
                     logger.LogError(e, "An error occured during migration");
                 } 
             }
-
             host.Run();
         }
 

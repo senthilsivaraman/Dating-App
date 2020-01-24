@@ -21,7 +21,7 @@ export class NavbarComponent implements OnInit {
     this.authService.login(this.model).subscribe( next => {
       this.alertify.success('Logged in Successfully');
     }, error => {
-      this.alertify.warning('Failed to Log in');
+      this.alertify.error('Failed to Log in');
     }, () => {
       this.router.navigate(['/discover']);
     }

@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DatingApp.API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20200122050134_ExtendedUserClass")]
-    partial class ExtendedUserClass
+    [Migration("20200124160205_NewMigration")]
+    partial class NewMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -55,6 +55,12 @@ namespace DatingApp.API.Migrations
                     b.Property<DateTime>("AccCreated")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("Bio")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("CurrentCity")
+                        .HasColumnType("TEXT");
+
                     b.Property<DateTime>("Dob")
                         .HasColumnType("TEXT");
 
@@ -67,7 +73,13 @@ namespace DatingApp.API.Migrations
                     b.Property<string>("Gender")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("InterestedIn")
+                        .HasColumnType("TEXT");
+
                     b.Property<DateTime>("LastSeen")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("LookingFor")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
@@ -78,6 +90,15 @@ namespace DatingApp.API.Migrations
 
                     b.Property<byte[]>("PasswordSalt")
                         .HasColumnType("BLOB");
+
+                    b.Property<string>("RaisedCity")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("RelationshipStatus")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Religion")
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 

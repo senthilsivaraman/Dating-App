@@ -10,5 +10,5 @@ export const appRoutes: Routes = [
     { path: 'discover', component: MemberListComponent, canActivate: [AuthGuard] },
     { path: 'matches', component: ListsComponent, canActivate: [AuthGuard] },
     { path: 'messages', component: MessagesComponent, canActivate: [AuthGuard] },
-    { path: '**', redirectTo: '', pathMatch: 'full' },
+    { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
