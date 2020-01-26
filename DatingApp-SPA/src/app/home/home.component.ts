@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { AuthService } from '../_services/auth.service';
+import { AlertifyService } from '../_services/alertify.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,10 +13,27 @@ export class HomeComponent implements OnInit {
 
   registerMode = false;
   values: any;
-  constructor(private http: HttpClient) { }
+  model: any = {};
+  constructor(private http: HttpClient, public authService: AuthService, private alertify: AlertifyService, private router: Router) { }
 
   ngOnInit() {
     this.getValues();
+  }
+
+
+  login() {
+    this.authService.login(this.model).subscribe( next => {
+      this.alertify.success('Logged in Successfully');
+    }, error => {
+      this.alertify.error('Failed to Log in');
+    }, () => {
+      this.router.navigate(['/discover']);
+    }
+    );
+  }
+
+  loggedIn() {
+    return this.authService.loggedIn();
   }
 
   registerToggle() {

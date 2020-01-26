@@ -7,7 +7,7 @@ import {JwtHelperService} from '@auth0/angular-jwt';
 
 const httpOptions = {
   headers: new HttpHeaders({
-    Authorization: 'Bearer' + localStorage.getItem('token')
+    Authorization: 'Bearer ' + localStorage.getItem('token')
   })
 };
 

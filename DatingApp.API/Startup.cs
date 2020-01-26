@@ -23,7 +23,10 @@ namespace DatingApp.API
         {
             Configuration = configuration;
         }
+
         public IConfiguration Configuration { get; }
+
+
       
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -77,12 +80,12 @@ namespace DatingApp.API
                 });
             }
 
+
+            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseHttpsRedirection();
             app.UseRouting();
             app.UseAuthentication ( );
             app.UseAuthorization();
-            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
