@@ -9,13 +9,16 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AuthService } from './_services/auth.service';
+import { AlertifyService } from './_services/alertify.service';
+import { ErrorInterceptorProvider } from './_services/error.interceptor';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { MemberListComponent } from './member-list/member-list.component';
 import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
 import { appRoutes } from './routes';
-import { ErrorInterceptorProvider } from './_services/error.interceptor';
+import { AuthGuard} from './_guards/auth.guard';
+import { UserService } from './_services/user.service';
 
 
 
@@ -30,7 +33,7 @@ import { ErrorInterceptorProvider } from './_services/error.interceptor';
     MessagesComponent
   ],
   imports: [
-    BrowserModule,
+   BrowserModule,
    HttpClientModule,
    FormsModule,
    BsDropdownModule.forRoot(),
@@ -39,7 +42,10 @@ import { ErrorInterceptorProvider } from './_services/error.interceptor';
   ],
   providers: [
     ErrorInterceptorProvider,
-    AuthService
+    AuthService,
+    AlertifyService,
+    UserService,
+
   ],
   bootstrap: [AppComponent]
 })

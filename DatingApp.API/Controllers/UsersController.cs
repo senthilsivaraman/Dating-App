@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
 using DatingApp.API.DTO;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Cors;
 
 namespace DatingApp.API.Controllers
 {

@@ -5,6 +5,7 @@ using DatingApp.API.Data;
 using DatingApp.API.Helpers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -21,7 +22,6 @@ namespace DatingApp.API
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-
         }
         public IConfiguration Configuration { get; }
       
@@ -34,7 +34,6 @@ namespace DatingApp.API
                  opt.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
              }
              );
-             services.AddCors();
              services.AddAutoMapper(typeof(DatingRepository).Assembly);
              services.AddScoped<IAuthRepository, AuthRepository>();
              services.AddScoped<IDatingRepository, DatingRepository>();
@@ -51,6 +50,9 @@ namespace DatingApp.API
                     };
                 });
         }
+
+
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -74,7 +76,7 @@ namespace DatingApp.API
                     });
                 });
             }
-          
+
             app.UseHttpsRedirection();
             app.UseRouting();
             app.UseAuthentication ( );
