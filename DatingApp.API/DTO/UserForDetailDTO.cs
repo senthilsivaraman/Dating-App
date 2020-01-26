@@ -23,7 +23,7 @@ namespace DatingApp.API.DTO
         public string RelationshipStatus { get; set; }
         public string LookingFor { get; set; }
         public string InterestedIn { get; set; }
-        public string PhotoURL { get; set; }
+        public string PhotoUrl { get; set; }
         public ICollection<PhotoForDetailsDTO> Photos { get; set; }
     }
 }

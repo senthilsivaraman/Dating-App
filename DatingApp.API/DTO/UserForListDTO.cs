@@ -15,6 +15,6 @@ namespace DatingApp.API.DTO
         public string RaisedCity { get; set; }
         public string RelationshipStatus { get; set; }
         public string LookingFor { get; set; }
-        public string PhotoURL { get; set; }
+        public string PhotoUrl { get; set; }
     }
 }

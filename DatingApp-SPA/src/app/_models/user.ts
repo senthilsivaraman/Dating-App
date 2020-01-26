@@ -8,6 +8,7 @@ export interface User {
     age: number;
     accCreated: Date;
     lastSeen: Date;
+    photoUrl: string;
     currentCity: string;
     raisedCity: string;
     relationshipStatus: string;
