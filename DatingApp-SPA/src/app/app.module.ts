@@ -22,6 +22,7 @@ import { appRoutes } from './routes';
 import { AuthGuard} from './_guards/auth.guard';
 import { UserService } from './_services/user.service';
 import { MemberCardComponent } from './Members/member-card/member-card.component';
+import { MemberDetailComponent } from './Members/member-detail/member-detail.component';
 
 
 export function tokenGetter() {
@@ -37,7 +38,8 @@ export function tokenGetter() {
     MemberListComponent,
     ListsComponent,
     MessagesComponent,
-    MemberCardComponent
+    MemberCardComponent,
+    MemberDetailComponent
   ],
   imports: [
    BrowserModule,

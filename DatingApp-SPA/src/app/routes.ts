@@ -4,11 +4,21 @@ import { MemberListComponent } from './Members/member-list/member-list.component
 import { MessagesComponent } from './messages/messages.component';
 import { ListsComponent } from './lists/lists.component';
 import { AuthGuard } from './_guards/auth.guard';
+import { MemberDetailComponent } from './Members/member-detail/member-detail.component';
 
 export const appRoutes: Routes = [
-    { path: '', component: HomeComponent },
-    { path: 'discover', component: MemberListComponent, canActivate: [AuthGuard] },
-    { path: 'matches', component: ListsComponent, canActivate: [AuthGuard] },
-    { path: 'messages', component: MessagesComponent, canActivate: [AuthGuard] },
-    { path: '**', redirectTo: '', pathMatch: 'full' }
+    {path: 'home', component: HomeComponent},
+    {
+        path: '',
+        runGuardsAndResolvers: 'always',
+        canActivate: [AuthGuard],
+        children: [
+            { path: 'discover', component: MemberListComponent},
+            { path: 'discover/:id', component: MemberDetailComponent},
+            { path: 'matches', component: ListsComponent},
+            { path: 'messages', component: MessagesComponent},
+        ]
+    },
+    {path: '**', redirectTo: 'home', pathMatch: 'full'}
+
 ];
