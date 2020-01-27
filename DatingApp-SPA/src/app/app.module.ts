@@ -23,6 +23,8 @@ import { AuthGuard} from './_guards/auth.guard';
 import { UserService } from './_services/user.service';
 import { MemberCardComponent } from './Members/member-card/member-card.component';
 import { MemberDetailComponent } from './Members/member-detail/member-detail.component';
+import { MemberDetailResolver } from './_resolver/member-detail-resolver';
+import { MemberListResolver } from './_resolver/member-list-resolver';
 
 
 export function tokenGetter() {
@@ -60,9 +62,11 @@ export function tokenGetter() {
   providers: [
     ErrorInterceptorProvider,
     AuthService,
+    AuthGuard,
     AlertifyService,
     UserService,
-
+    MemberDetailResolver,
+    MemberListResolver
   ],
   bootstrap: [AppComponent]
 })

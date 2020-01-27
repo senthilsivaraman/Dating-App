@@ -15,15 +15,19 @@ export class MemberDetailComponent implements OnInit {
   constructor(private userService: UserService, private alertify: AlertifyService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.loadUser();
+    this.route.data.subscribe(data => { 
+         this.user = data['user'];
+    });
   }
 
-  // Adding + will make id int instead of string
-  loadUser() {
-    this.userService.getUser(+this.route.snapshot.params['id']).subscribe((user: User) => {
-      this.user = user;
-    }, error => {
-      this.alertify.error(error);
-   });
- }
+  // Adding + will make id int instead of string //this loaduser() is replaced with _resolver , changes in ngoninit()
+  //loadUser() {
+    //this.userService.getUser(+this.route.snapshot.params['id']).subscribe((user: User) => {
+      //this.user = user;
+    //}, error => {
+      //this.alertify.error(error);
+   //});
+ //}
+ 
+ 
 }
