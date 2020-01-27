@@ -1,1 +1,62 @@
-<p>member-detail works!</p>
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card">
+            <img class="card-img-top img-thumbnail" src="{{user?.photoUrl}}" alt="{{user.fullName}}">
+            <div class="card-body">
+                <div>
+                    <strong>Location:</strong>
+                      <p>{{user.currentCity}}</p>
+                </div>
+                <div>
+                    <strong>Age:</strong>
+                      <p>{{user.age}}</p>
+                </div>
+                <div>
+                    <strong>Last Active:</strong>
+                      <p>{{user.lastSeen}}</p>
+                </div>
+                <div>
+                    <strong>Member Since:</strong>
+                      <p>{{user.accCreated}}</p>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="btn-group d-flex">
+                    <button class="btn btn-primary w-100">Like</button>
+                    <button class="btn btn-success w-100">Message</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <div class="tab-panel">
+                <tabset class="member-tabset">
+                    <tab heading="About {{user?.fullName}}">
+                        <h4>Bio</h4>
+                        <p>{{user.bio}}</p>
+                        <h4>Raised City</h4>
+                        <p>{{user.raisedCity}}</p>
+                        <h4>Religion</h4>
+                        <p>{{user.religion}}</p>
+                    </tab>
+                    <tab heading="Interests">
+                        <h4>Relationship Status</h4>
+                        <p>{{user.relationshipStatus}}</p>
+                        <h4>Looking For</h4>
+                        <p>{{user.lookingFor}}</p>
+                        <h4>Interested In</h4>
+                        <p>{{user.interestedIn}}</p>
+                    </tab>
+                    <tab heading="Photos">
+                        <p>Photos</p>
+                    </tab>
+                    <tab heading="Messages">
+                        <p>Messages</p>
+                    </tab>
+                    
+                </tabset>
+            </div>
+        </div>
+    </div>
+</div>
