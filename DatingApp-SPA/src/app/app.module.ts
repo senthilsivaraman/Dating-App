@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { NgxGalleryModule } from 'ngx-gallery';
 import {JwtModule} from '@auth0/angular-jwt';
+import {MatSelectModule} from '@angular/material/select';
 
 
 import { AppComponent } from './app.component';
@@ -26,6 +27,8 @@ import { MemberCardComponent } from './Members/member-card/member-card.component
 import { MemberDetailComponent } from './Members/member-detail/member-detail.component';
 import { MemberDetailResolver } from './_resolver/member-detail-resolver';
 import { MemberListResolver } from './_resolver/member-list-resolver';
+import { MemberEditComponent } from './Members/member-edit/member-edit.component';
+import { MemberEditResolver } from './_resolver/member-edit-resolver';
 
 
 export function tokenGetter() {
@@ -49,7 +52,8 @@ export class CustomHammerConfig extends HammerGestureConfig  {
     ListsComponent,
     MessagesComponent,
     MemberCardComponent,
-    MemberDetailComponent
+    MemberDetailComponent,
+    MemberEditComponent
   ],
   imports: [
    BrowserModule,
@@ -60,6 +64,7 @@ export class CustomHammerConfig extends HammerGestureConfig  {
    BrowserAnimationsModule,
    RouterModule.forRoot(appRoutes),
    NgxGalleryModule,
+   MatSelectModule,
    JwtModule.forRoot({
     config: {
       tokenGetter,
@@ -76,6 +81,7 @@ export class CustomHammerConfig extends HammerGestureConfig  {
     UserService,
     MemberDetailResolver,
     MemberListResolver,
+    MemberEditResolver,
     { provide: HAMMER_GESTURE_CONFIG, useClass: CustomHammerConfig }
   ],
   bootstrap: [AppComponent]
