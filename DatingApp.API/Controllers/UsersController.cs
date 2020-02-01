@@ -6,6 +6,8 @@ using AutoMapper;
 using DatingApp.API.DTO;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Cors;
+using System;
+using System.Security.Claims;
 
 namespace DatingApp.API.Controllers
 {
@@ -37,5 +39,22 @@ namespace DatingApp.API.Controllers
             var userToRetun = _mapper.Map<UserForDetailDTO>(user);
             return Ok(userToRetun);
         }
+
+        [HttpPut("{id}")]
+         public async Task<IActionResult> UpdateUser(int id, UserForUpdateDTO userForUpdateDTO)
+         {
+             if(id != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
+                return Unauthorized();
+             
+             var userFromRepo = await _repo.GetUser(id);
+
+             _mapper.Map(userForUpdateDTO, userFromRepo);
+
+             if(await _repo.SaveAll())
+                return NoContent();
+            
+            throw new Exception($"Updating user{id} failed on save");
+         }
+
     }
 }   

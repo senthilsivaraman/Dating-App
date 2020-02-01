@@ -2813,11 +2813,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Senthilkumar\\Documents\\GitHub\\Dating-App\\datingapp.api\\DatingApp.API.csproj",
+      "projectUniqueName": "c:\\Users\\Senthilkumar\\Documents\\GitHub\\Dating-App\\DatingApp.API\\DatingApp.API.csproj",
       "projectName": "DatingApp.API",
-      "projectPath": "C:\\Users\\Senthilkumar\\Documents\\GitHub\\Dating-App\\datingapp.api\\DatingApp.API.csproj",
+      "projectPath": "c:\\Users\\Senthilkumar\\Documents\\GitHub\\Dating-App\\DatingApp.API\\DatingApp.API.csproj",
       "packagesPath": "C:\\Users\\Senthilkumar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Senthilkumar\\Documents\\GitHub\\Dating-App\\datingapp.api\\obj\\",
+      "outputPath": "c:\\Users\\Senthilkumar\\Documents\\GitHub\\Dating-App\\DatingApp.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
