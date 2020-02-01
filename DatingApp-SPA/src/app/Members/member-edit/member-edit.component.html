@@ -1,0 +1,77 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-sm-4">
+            <h1>Your Profile</h1>
+        </div>
+        <div class="col-sm-8">
+            <div *ngIf="editForm.dirty" class="alert alert-info">
+                <strong>Information: </strong>You have made changes. Any unsaved changes will be lost
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card">
+            <img class="card-img-top img-thumbnail" src="{{user?.photoUrl}}" alt="{{user.fullName}}">
+            <div class="card-body">
+                <div>
+                    <strong>Location:</strong>
+                      <p>{{user.currentCity}}</p>
+                </div>
+                <div>
+                    <strong>Age:</strong>
+                      <p>{{user.age}}</p>
+                </div>
+                <div>
+                    <strong>Last Active:</strong>
+                      <p>{{user.lastSeen}}</p>
+                </div>
+                <div>
+                    <strong>Member Since:</strong>
+                      <p>{{user.accCreated}}</p>
+                </div>
+            </div>
+            <div class="card-footer">
+                    <button [disabled]="!editForm.dirty" form="editForm" class="btn btn-success btn-block">Save to Update</button>
+            </div>
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <div class="tab-panel">
+                <tabset class="member-tabset">
+                    <tab heading="Edit Profile">
+                        <form #editForm="ngForm" id="editForm" (ngSubmit)="updateUser()">
+                            <h4>Bio</h4>
+                            <textarea name="Intoduction" rows="6" class="form-control"
+                                [(ngModel)]="user.bio"></textarea>
+                            <h4>Current City</h4>
+                            <input type="text"  name="Living in" rows="6" class="form-control"
+                            [(ngModel)]="user.currentCity">
+                            <h4>Raised City</h4>
+                            <input type="text"  name="Raised in" rows="6" class="form-control"
+                            [(ngModel)]="user.raisedCity">
+                            <h4>Religion</h4>
+                            <input type="text"  name="Religion" rows="6" class="form-control"
+                            [(ngModel)]="user.religion">
+                            <h4>Relationship Status</h4>
+                            <input type="text"  name="Status" rows="6" class="form-control"
+                            [(ngModel)]="user.relationshipStatus">
+                            <h4>Looking For</h4>
+                            <input type="text"  name="Looking fot" rows="6" class="form-control"
+                            [(ngModel)]="user.lookingFor">
+                            <h4>Intersted In</h4>
+                            <input type="text"  name="Interestss" rows="6" class="form-control"
+                            [(ngModel)]="user.interestedIn">
+                            <h4>Email</h4>
+                            <input type="email"  name="Email" rows="6" class="form-control"
+                            [(ngModel)]="user.email">
+                        </form>
+                    </tab>
+                    <tab heading="Edit Photos">
+                        <h4>Coming Soon..</h4>
+                    </tab>            
+                </tabset>
+            </div>
+        </div>
+    </div>
+</div>
