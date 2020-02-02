@@ -372,3 +372,4 @@ C:\Users\Senthilkumar\Documents\GitHub\Dating-App\datingapp.api\bin\Debug\netcor
 C:\Users\Senthilkumar\Documents\GitHub\Dating-App\datingapp.api\obj\Debug\netcoreapp3.1\DatingApp.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Senthilkumar\Documents\GitHub\Dating-App\datingapp.api\bin\Debug\netcoreapp3.1\AutoMapper.dll
 C:\Users\Senthilkumar\Documents\GitHub\Dating-App\datingapp.api\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Senthilkumar\Documents\GitHub\Dating-App\datingapp.api\bin\Debug\netcoreapp3.1\CloudinaryDotNet.dll
