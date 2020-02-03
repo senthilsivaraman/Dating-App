@@ -1,4 +1,4 @@
-<div class="container mt-4">
+    <div class="container mt-4">
     <div class="row">
         <div class="col-sm-4">
             <h1>Your Profile</h1>
@@ -42,28 +42,29 @@
                     <tab heading="Edit Profile">
                         <form #editForm="ngForm" id="editForm" (ngSubmit)="updateUser()">
                             <h4>Bio</h4>
-                            <textarea name="Intoduction" rows="6" class="form-control"
-                                [(ngModel)]="user.bio"></textarea>
+                            <textarea name="bio" rows="6" class="form-control"
+                                [(ngModel)]="user.bio"></textarea>     
+                                <!-- [(ngModel)]="user.property" name="property" -->
                             <h4>Current City</h4>
-                            <input type="text"  name="Living in" rows="6" class="form-control"
+                            <input type="text"  name="currentCity" rows="6" class="form-control"
                             [(ngModel)]="user.currentCity">
                             <h4>Raised City</h4>
-                            <input type="text"  name="Raised in" rows="6" class="form-control"
+                            <input type="text"  name="raisedCity" rows="6" class="form-control"
                             [(ngModel)]="user.raisedCity">
                             <h4>Religion</h4>
-                            <input type="text"  name="Religion" rows="6" class="form-control"
+                            <input type="text"  name="religion" rows="6" class="form-control"
                             [(ngModel)]="user.religion">
                             <h4>Relationship Status</h4>
-                            <input type="text"  name="Status" rows="6" class="form-control"
+                            <input type="text"  name="relationshipStatus" rows="6" class="form-control"
                             [(ngModel)]="user.relationshipStatus">
                             <h4>Looking For</h4>
-                            <input type="text"  name="Looking fot" rows="6" class="form-control"
+                            <input type="text"  name="lookingFor" rows="6" class="form-control"
                             [(ngModel)]="user.lookingFor">
                             <h4>Intersted In</h4>
-                            <input type="text"  name="Interestss" rows="6" class="form-control"
+                            <input type="text"  name="interestedIn" rows="6" class="form-control"
                             [(ngModel)]="user.interestedIn">
                             <h4>Email</h4>
-                            <input type="email"  name="Email" rows="6" class="form-control"
+                            <input type="email"  name="email" rows="6" class="form-control"
                             [(ngModel)]="user.email">
                         </form>
                     </tab>
