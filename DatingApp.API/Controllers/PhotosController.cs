@@ -50,7 +50,7 @@ namespace DatingApp.API.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> AddMultiplePhotos(int userId, PhotoUploadDTO photoUploadDTO)
+        public async Task<IActionResult> AddMultiplePhotos(int userId, [FromForm]PhotoUploadDTO photoUploadDTO)
         {
             if(userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
                 return Unauthorized();   
@@ -87,8 +87,34 @@ namespace DatingApp.API.Controllers
             {
                 var photoToReturn = _mapper.Map<DisplayPhotoDto>(photo);
                 return CreatedAtRoute("GetPhoto", new {userId = userId, id = photo.Id}, photoToReturn);
-            }
+            };
             return BadRequest("Could not add the photo");
+        }
+
+        [HttpPost("{id}/setMain")]
+        public async Task<IActionResult> SetMainPhoto(int userId, int id)
+        {
+            if(userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
+                return Unauthorized();   
+
+            var user = await _repo.GetUser(userId); // Checking the match of photoid belongs to userId from repo
+
+            if(!user.Photos.Any(p => p.Id == id))
+                return Unauthorized();
+
+            // Getting Photo from repo
+            var photoFromRepo = await _repo.GetPhoto(id);
+
+            if(photoFromRepo.IsMain)
+                return BadRequest("This is already your main photo");
+            
+            var currentMainPhoto = await _repo.GetMainPhotoOfUser(userId);
+            currentMainPhoto.IsMain = false;
+            photoFromRepo.IsMain = true;
+
+            if(await _repo.SaveAll())
+                return NoContent();
+            return BadRequest("Could not Set this photo to main");
         }
     }
 }
