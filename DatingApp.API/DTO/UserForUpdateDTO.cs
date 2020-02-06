@@ -9,5 +9,6 @@ namespace DatingApp.API.DTO
         public string RelationshipStatus { get; set; }
         public string LookingFor { get; set; }
         public string InterestedIn { get; set; }
+         public string Email { get; set; }
     }
 }
