@@ -1,12 +1,60 @@
 <form [formGroup]="registerForm" (ngSubmit) = "signup()">
-    <h2 class="text-center text-primary">Sign Up Form</h2>
+    <h2 class="text-center text-primary">Sign Up</h2>
+    <h4 class="text-center text-primary">Lets find your Teddy, my buddy</h4>
     <hr>
+
+    <div class="form-group">
+      <label class="control-label" style="margin-right:10px">I am a: </label>
+      <label class="radio-inline">
+        <input class="mr-3" type="radio" value="male" formControlName="gender">Male
+      </label>
+      <label class="radio-inline ml-3">
+        <input class="mr-3" type="radio" value="female" formControlName="gender">Female
+      </label>
+      <label class="radio-inline ml-3">
+        <input class="mr-3" type="radio" value="other" formControlName="gender">Other
+      </label>
+    </div>
   
     <div class="form-group">
       <input type="text" 
        [ngClass]="{'is-invalid': registerForm.get('name').errors && registerForm.get('name').touched}"
-       class="form-control" formControlName="name" placeholder="Username">
-       <div class="invalid-feedback">Please chose your Username</div>
+       class="form-control" formControlName="name" placeholder="Full Name">
+       <div class="invalid-feedback">Enter your Full Name</div>
+    </div>
+
+    <div class="form-group">
+      <input [ngClass]="{'is-invalid': registerForm.get('dateOfBirth').errors && registerForm.get('dateOfBirth').touched}" class="form-control"
+        placeholder="Date of Birth" formControlName="dateOfBirth" type="date" >
+      <div class="invalid-feedback" *ngIf="registerForm.get('dateOfBirth').touched && registerForm.get('dateOfBirth').hasError('required')">Date of Birth is required</div>
+    </div>
+
+    <div class="form-group">
+      <input [ngClass]="{'is-invalid': registerForm.get('accountUsername').errors && registerForm.get('accountUsername').touched}" class="form-control"
+        placeholder="Username/Login name" formControlName="accountUsername">
+      <div class="invalid-feedback" *ngIf="registerForm.get('accountUsername').touched && registerForm.get('accountUsername').hasError('required')">Username is required</div>
+    </div>
+
+    <div class="form-group">
+      <input type="email" 
+       [ngClass]="{'is-invalid': registerForm.get('accountEmail').errors && registerForm.get('accountEmail').touched}"
+       class="form-control" formControlName="accountEmail" placeholder="Email ID">
+       <div class="invalid-feedback">Enter your Email ID correctly</div>
+    </div>
+
+
+
+    <div class="form-group">
+      <label class="control-label" style="margin-right:10px">Interested in: </label>
+      <label class="radio-inline">
+        <input class="mr-3" type="radio" value="male" formControlName="interstedIn">Male
+      </label>
+      <label class="radio-inline ml-3">
+        <input class="mr-3" type="radio" value="female" formControlName="interstedIn">Female
+      </label>
+      <label class="radio-inline ml-3">
+        <input class="mr-3" type="radio" value="other" formControlName="interstedIn">Other
+      </label>
     </div>
   
     <div class="form-group">
@@ -44,7 +92,7 @@
     </div>
 
     <div class="form-group text-center">
-      <button class="btn btn-success" style="margin:10px;" type="submit">Sign Up</button>
+      <button class="btn btn-success" [disabled]="!registerForm.valid" style="margin:10px;" type="submit">Sign Up</button>
       <button class="btn btn-default" style="margin:5px;" type="button" (click)="cancel()">Cancel</button>
     </div>
     
