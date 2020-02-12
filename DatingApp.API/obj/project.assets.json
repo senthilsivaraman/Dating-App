@@ -2848,11 +2848,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Senthilkumar\\Documents\\GitHub\\Dating-App\\DatingApp.API\\DatingApp.API.csproj",
+      "projectUniqueName": "C:\\Users\\Senthilkumar\\Documents\\GitHub\\Dating-App\\datingapp.api\\DatingApp.API.csproj",
       "projectName": "DatingApp.API",
-      "projectPath": "c:\\Users\\Senthilkumar\\Documents\\GitHub\\Dating-App\\DatingApp.API\\DatingApp.API.csproj",
+      "projectPath": "C:\\Users\\Senthilkumar\\Documents\\GitHub\\Dating-App\\datingapp.api\\DatingApp.API.csproj",
       "packagesPath": "C:\\Users\\Senthilkumar\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Senthilkumar\\Documents\\GitHub\\Dating-App\\DatingApp.API\\obj\\",
+      "outputPath": "C:\\Users\\Senthilkumar\\Documents\\GitHub\\Dating-App\\datingapp.api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -2868,7 +2868,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://sitecore.myget.org/F/sc-packages/api/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
