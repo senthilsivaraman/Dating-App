@@ -30,15 +30,15 @@
     </div>
 
     <div class="form-group">
-      <input [ngClass]="{'is-invalid': registerForm.get('accountUsername').errors && registerForm.get('accountUsername').touched}" class="form-control"
-        placeholder="Username/Login name" formControlName="accountUsername">
-      <div class="invalid-feedback" *ngIf="registerForm.get('accountUsername').touched && registerForm.get('accountUsername').hasError('required')">Username is required</div>
+      <input [ngClass]="{'is-invalid': registerForm.get('fullName').errors && registerForm.get('fullName').touched}" class="form-control"
+        placeholder="Username/Login name" formControlName="fullName">
+      <div class="invalid-feedback" *ngIf="registerForm.get('fullName').touched && registerForm.get('fullName').hasError('required')">Username is required</div>
     </div>
 
     <div class="form-group">
       <input type="email" 
-       [ngClass]="{'is-invalid': registerForm.get('accountEmail').errors && registerForm.get('accountEmail').touched}"
-       class="form-control" formControlName="accountEmail" placeholder="Email ID">
+       [ngClass]="{'is-invalid': registerForm.get('email').errors && registerForm.get('email').touched}"
+       class="form-control" formControlName="email" placeholder="Email ID">
        <div class="invalid-feedback">Enter your Email ID correctly</div>
     </div>
 
@@ -47,13 +47,13 @@
     <div class="form-group">
       <label class="control-label" style="margin-right:10px">Interested in: </label>
       <label class="radio-inline">
-        <input class="mr-3" type="radio" value="male" formControlName="interstedIn">Male
+        <input class="mr-3" type="radio" value="male" formControlName="interestedIn">Male
       </label>
       <label class="radio-inline ml-3">
-        <input class="mr-3" type="radio" value="female" formControlName="interstedIn">Female
+        <input class="mr-3" type="radio" value="female" formControlName="interestedIn">Female
       </label>
       <label class="radio-inline ml-3">
-        <input class="mr-3" type="radio" value="other" formControlName="interstedIn">Other
+        <input class="mr-3" type="radio" value="other" formControlName="interestedIn">Other
       </label>
     </div>
   

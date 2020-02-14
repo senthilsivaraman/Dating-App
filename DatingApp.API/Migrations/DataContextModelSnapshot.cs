@@ -62,7 +62,7 @@ namespace DatingApp.API.Migrations
                     b.Property<string>("CurrentCity")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("Dob")
+                    b.Property<DateTime>("DateOfBirth")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Email")

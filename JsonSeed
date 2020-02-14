@@ -6,7 +6,7 @@
     FullName: '{{firstName("male")}} {{surname("male")}}',
     Email: '{{email()}}' ,
     Gender: 'Male',
-    Dob: '{{date(new Date(1980,0,1), new Date(2002, 11, 31), "YYYY-MM-dd")}}',
+    DateOfBirth: '{{date(new Date(1980,0,1), new Date(2002, 11, 31), "YYYY-MM-dd")}}',
     AccCreated: '{{date(new Date(2019,0,1), new Date(2020, 1, 20), "YYYY-MM-dd")}}',
     LastSeen: function(){return this.AccCreated; },
     Photos: [

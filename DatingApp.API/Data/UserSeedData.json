@@ -5,7 +5,7 @@
     "FullName": "Sherri Crane",
     "Email": "sherricrane@duoflex.com",
     "Gender": "female",
-    "Dob": "1987-03-16",
+    "DateOfBirth": "1987-03-16",
     "AccCreated": "2019-03-04",
     "LastSeen": "2019-03-04",
     "Photos": [
@@ -29,7 +29,7 @@
     "FullName": "Sheena Hernandez",
     "Email": "sheenahernandez@duoflex.com",
     "Gender": "female",
-    "Dob": "1993-10-01",
+    "DateOfBirth": "1993-10-01",
     "AccCreated": "2019-10-04",
     "LastSeen": "2019-10-04",
     "Photos": [
@@ -53,7 +53,7 @@
     "FullName": "Jaime Stevenson",
     "Email": "jaimestevenson@duoflex.com",
     "Gender": "female",
-    "Dob": "1991-07-31",
+    "DateOfBirth": "1991-07-31",
     "AccCreated": "2019-02-20",
     "LastSeen": "2019-02-20",
     "Photos": [
@@ -77,7 +77,7 @@
     "FullName": "Reva Owen",
     "Email": "revaowen@duoflex.com",
     "Gender": "female",
-    "Dob": "2000-11-28",
+    "DateOfBirth": "2000-11-28",
     "AccCreated": "2019-11-14",
     "LastSeen": "2019-11-14",
     "Photos": [
@@ -101,7 +101,7 @@
     "FullName": "Patty Curry",
     "Email": "pattycurry@duoflex.com",
     "Gender": "female",
-    "Dob": "1985-10-10",
+    "DateOfBirth": "1985-10-10",
     "AccCreated": "2019-11-15",
     "LastSeen": "2019-11-15",
     "Photos": [
@@ -125,7 +125,7 @@
     "FullName": "Vonda Butler",
     "Email": "vondabutler@duoflex.com",
     "Gender": "female",
-    "Dob": "1996-12-03",
+    "DateOfBirth": "1996-12-03",
     "AccCreated": "2019-02-10",
     "LastSeen": "2019-02-10",
     "Photos": [
@@ -149,7 +149,7 @@
     "FullName": "Brenda Kerr",
     "Email": "brendakerr@duoflex.com",
     "Gender": "female",
-    "Dob": "1997-05-09",
+    "DateOfBirth": "1997-05-09",
     "AccCreated": "2019-01-10",
     "LastSeen": "2019-01-10",
     "Photos": [
@@ -173,7 +173,7 @@
     "FullName": "Michelle Sweeney",
     "Email": "michellesweeney@duoflex.com",
     "Gender": "female",
-    "Dob": "1989-01-11",
+    "DateOfBirth": "1989-01-11",
     "AccCreated": "2019-01-22",
     "LastSeen": "2019-01-22",
     "Photos": [
@@ -197,7 +197,7 @@
     "FullName": "Iva Nunez",
     "Email": "ivanunez@duoflex.com",
     "Gender": "female",
-    "Dob": "2000-11-23",
+    "DateOfBirth": "2000-11-23",
     "AccCreated": "2020-02-04",
     "LastSeen": "2020-02-04",
     "Photos": [
@@ -221,7 +221,7 @@
     "FullName": "Ladonna Pace",
     "Email": "ladonnapace@duoflex.com",
     "Gender": "female",
-    "Dob": "1997-01-13",
+    "DateOfBirth": "1997-01-13",
     "AccCreated": "2019-02-05",
     "LastSeen": "2019-02-05",
     "Photos": [
@@ -246,7 +246,7 @@
     "FullName": "Holland Riley",
     "Email": "hollandriley@duoflex.com",
     "Gender": "Male",
-    "Dob": "2002-12-29",
+    "DateOfBirth": "2002-12-29",
     "AccCreated": "2019-02-02",
     "LastSeen": "2019-02-02",
     "Photos": [
@@ -270,7 +270,7 @@
     "FullName": "Meyers Pope",
     "Email": "meyerspope@duoflex.com",
     "Gender": "Male",
-    "Dob": "1996-04-17",
+    "DateOfBirth": "1996-04-17",
     "AccCreated": "2019-09-03",
     "LastSeen": "2019-09-03",
     "Photos": [
@@ -294,7 +294,7 @@
     "FullName": "Weaver Rush",
     "Email": "weaverrush@duoflex.com",
     "Gender": "Male",
-    "Dob": "1985-05-15",
+    "DateOfBirth": "1985-05-15",
     "AccCreated": "2019-04-16",
     "LastSeen": "2019-04-16",
     "Photos": [
@@ -318,7 +318,7 @@
     "FullName": "Simpson Dillon",
     "Email": "simpsondillon@duoflex.com",
     "Gender": "Male",
-    "Dob": "1997-02-27",
+    "DateOfBirth": "1997-02-27",
     "AccCreated": "2020-01-09",
     "LastSeen": "2020-01-09",
     "Photos": [
@@ -342,7 +342,7 @@
     "FullName": "Bridges Lynch",
     "Email": "bridgeslynch@duoflex.com",
     "Gender": "Male",
-    "Dob": "1990-10-28",
+    "DateOfBirth": "1990-10-28",
     "AccCreated": "2019-03-30",
     "LastSeen": "2019-03-30",
     "Photos": [
@@ -366,7 +366,7 @@
     "FullName": "Manning Shannon",
     "Email": "manningshannon@duoflex.com",
     "Gender": "Male",
-    "Dob": "1996-05-22",
+    "DateOfBirth": "1996-05-22",
     "AccCreated": "2019-11-10",
     "LastSeen": "2019-11-10",
     "Photos": [
@@ -390,7 +390,7 @@
     "FullName": "Mccray Patton",
     "Email": "mccraypatton@duoflex.com",
     "Gender": "Male",
-    "Dob": "2001-09-02",
+    "DateOfBirth": "2001-09-02",
     "AccCreated": "2019-08-17",
     "LastSeen": "2019-08-17",
     "Photos": [
@@ -414,7 +414,7 @@
     "FullName": "Hanson Cabrera",
     "Email": "hansoncabrera@duoflex.com",
     "Gender": "Male",
-    "Dob": "1982-01-31",
+    "DateOfBirth": "1982-01-31",
     "AccCreated": "2019-04-11",
     "LastSeen": "2019-04-11",
     "Photos": [
@@ -438,7 +438,7 @@
     "FullName": "Saunders Watkins",
     "Email": "saunderswatkins@duoflex.com",
     "Gender": "Male",
-    "Dob": "1994-09-11",
+    "DateOfBirth": "1994-09-11",
     "AccCreated": "2019-01-06",
     "LastSeen": "2019-01-06",
     "Photos": [
@@ -462,7 +462,7 @@
     "FullName": "Cervantes Hoffman",
     "Email": "cervanteshoffman@duoflex.com",
     "Gender": "Male",
-    "Dob": "1994-08-19",
+    "DateOfBirth": "1994-08-19",
     "AccCreated": "2019-06-08",
     "LastSeen": "2019-06-08",
     "Photos": [
