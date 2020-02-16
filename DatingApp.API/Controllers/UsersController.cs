@@ -8,9 +8,11 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Cors;
 using System;
 using System.Security.Claims;
+using DatingApp.API.Helpers;
 
 namespace DatingApp.API.Controllers
 {
+    [ServiceFilter(typeof(LogUserActivity))]
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
@@ -25,9 +27,17 @@ namespace DatingApp.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetUsers()
+        public async Task<IActionResult> GetUsers([FromQuery]UserParams userParams)
         {
-            var users = await _repo.GetUsers();
+           var currentUserId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+           var userFromRepo = await _repo.GetUser(currentUserId);
+           userParams.UserId = currentUserId;
+
+           if (string.IsNullOrEmpty(userParams.Gender)){
+               userParams.Gender = userFromRepo.InterestedIn == "male" ? "female"  : "male";
+           }
+
+            var users = await _repo.GetUsers(userParams);
             var usersToReturn = _mapper.Map<IEnumerable<UserForListDTO>>(users);
             return Ok(usersToReturn);
         }

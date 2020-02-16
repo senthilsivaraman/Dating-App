@@ -12,20 +12,35 @@ import { ActivatedRoute } from '@angular/router';
 export class MemberListComponent implements OnInit {
 
   users: User[];
+  user: User = JSON.parse(localStorage.getItem('user'));
+  genderList = [{value: 'male', display: 'Males'}, {value: 'female', display: 'Females'}];
+  userParams: any = {};
   constructor(private userService: UserService, private alertify: AlertifyService, private route: ActivatedRoute)  { }
 
   ngOnInit() {
     this.route.data.subscribe(data => {
       this.users = data['users'];
- });
+  });
+    this.userParams.minAge = 18;
+    this.userParams.maxAge = 99;
+    this.loadUsers();
   }
 
-  // loadUsers() {
-  //   this.userService.getUsers().subscribe((users: User[]) => {
-  //     this.users = users;
-  //   }, error => {
-  //     this.alertify.error(error);
-  //   });
-  // }
 
+  resetFilters() {
+    this.userParams.minAge = 18;
+    this.userParams.maxAge = 99;
+    this.loadUsers();
+  }
+
+  loadUsers() {
+    this.userService
+      .getUsers(this.userParams)
+      .subscribe(
+        (user: User[]) => {
+           this.users = user;
+            }, error => {
+               this.alertify.error(error);
+        });
+  }
 }
