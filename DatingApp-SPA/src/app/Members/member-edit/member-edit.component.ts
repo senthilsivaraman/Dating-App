@@ -11,6 +11,8 @@ import { AuthService } from 'src/app/_services/auth.service';
   templateUrl: './member-edit.component.html',
   styleUrls: ['./member-edit.component.css']
 })
+
+
 export class MemberEditComponent implements OnInit {
   @ViewChild('editForm', {static: true}) editForm: NgForm;
   user: User;
