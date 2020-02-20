@@ -49,7 +49,7 @@ namespace DatingApp.API.Data
 
             users = (users.Where(u => u.Id != userParams.UserId)).ToList();
 
-            users = (users.Where(u => u.Gender != userParams.Gender)).ToList();
+            users = (users.Where(u => u.InterestedIn == userParams.Gender)).ToList();
 
             if(userParams.MinAge != 18 || userParams.MaxAge != 99)
             {
