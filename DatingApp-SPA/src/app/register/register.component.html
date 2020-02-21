@@ -19,8 +19,8 @@
     <div class="form-group">
       <input type="text" 
        [ngClass]="{'is-invalid': registerForm.get('name').errors && registerForm.get('name').touched}"
-       class="form-control" formControlName="name" placeholder="Full Name">
-       <div class="invalid-feedback">Enter your Full Name</div>
+       class="form-control" formControlName="name" placeholder="Email / Username">
+       <div class="invalid-feedback">Enter your Email / Username</div>
     </div>
 
     <div class="form-group">
@@ -31,8 +31,8 @@
 
     <div class="form-group">
       <input [ngClass]="{'is-invalid': registerForm.get('fullName').errors && registerForm.get('fullName').touched}" class="form-control"
-        placeholder="Username/Login name" formControlName="fullName">
-      <div class="invalid-feedback" *ngIf="registerForm.get('fullName').touched && registerForm.get('fullName').hasError('required')">Username is required</div>
+        placeholder="Your Full Name" formControlName="fullName">
+      <div class="invalid-feedback" *ngIf="registerForm.get('fullName').touched && registerForm.get('fullName').hasError('required')">Full Name is required</div>
     </div>
 
     <div class="form-group">
