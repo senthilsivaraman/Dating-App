@@ -17,9 +17,9 @@ import { ErrorInterceptorProvider } from './_services/error.interceptor';
 import { appRoutes } from './routes';
 import { AuthGuard} from './_guards/auth.guard';
 import { UserService } from './_services/user.service';
-import { MemberDetailResolver } from './_resolver/member-detail-resolver';
-import { MemberListResolver } from './_resolver/member-list-resolver';
-import { MemberEditResolver } from './_resolver/member-edit-resolver';
+import { MemberDetailResolver } from './_resolver/member-detail.resolver';
+import { MemberListResolver } from './_resolver/member-list.resolver';
+import { MemberEditResolver } from './_resolver/member-edit.resolver';
 import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
 import {TimeAgoPipe} from 'time-ago-pipe';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -32,6 +32,8 @@ import { MemberCardComponent } from './Members/member-card/member-card.component
 import { MemberDetailComponent } from './Members/member-detail/member-detail.component';
 import { MemberEditComponent } from './Members/member-edit/member-edit.component';
 import { PhotoEditorComponent } from './Members/photo-editor/photo-editor.component';
+import { ListsResolver } from './_resolver/lists.resolver';
+
 
 
 
@@ -90,6 +92,7 @@ export class CustomHammerConfig extends HammerGestureConfig  {
     UserService,
     MemberDetailResolver,
     MemberListResolver,
+    ListsResolver,
     MemberEditResolver,
     { provide: HAMMER_GESTURE_CONFIG, useClass: CustomHammerConfig }
   ],

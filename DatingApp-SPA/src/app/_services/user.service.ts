@@ -18,13 +18,21 @@ export class UserService {
 
 
 
-  getUsers(userParams?): Observable<User[]> {
+  getUsers(userParams?, likesParam?): Observable<User[]> {
 
     let params = new HttpParams();
 
     if (userParams != null) {
       params = params.append('minAge', userParams.minAge);
       params = params.append('maxAge', userParams.maxAge);
+    }
+
+    if (likesParam === 'Likers') {
+      params = params.append('likers', 'true');
+    }
+
+    if (likesParam === 'Likees') {
+      params = params.append('likees', 'true');
     }
 
     return this.http.get<User[]>(this.baseUrl + 'users', {params});
