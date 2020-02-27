@@ -36,4 +36,12 @@ export class ListsComponent implements OnInit {
         });
   }
 
+  resetLikes() {
+
+  }
+
+  resetLikers() {
+
+  }
+
 }
