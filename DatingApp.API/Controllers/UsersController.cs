@@ -1,13 +1,13 @@
+using System;
+using System.Security.Claims;
 using System.Threading.Tasks;
-using DatingApp.API.Data;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
 using DatingApp.API.DTO;
-using System.Collections.Generic;
-using Microsoft.AspNetCore.Cors;
-using System;
-using System.Security.Claims;
+using DatingApp.API.Data;
 using DatingApp.API.Helpers;
 using DatingApp.API.Models;
 
