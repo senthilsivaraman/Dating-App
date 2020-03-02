@@ -14,11 +14,11 @@ export class MemberListComponent implements OnInit {
 
   users: User[];
 
-  pagination: Pagination;
-
   user: User = JSON.parse(localStorage.getItem('user'));
   genderList = [{value: 'male', display: 'Males'}, {value: 'female', display: 'Females'}];
   userParams: any = {};
+
+  pagination: Pagination;
   constructor(private userService: UserService, private alertify: AlertifyService, private route: ActivatedRoute)  { }
 
   ngOnInit() {
@@ -46,7 +46,7 @@ export class MemberListComponent implements OnInit {
 
   loadUsers() {
     this.userService
-      .getUsers(this.pagination.currentPage, this.pagination.itemsPerPage)
+      .getUsers(this.pagination.currentPage, this.pagination.itemsPerPage, this.userParams)
       .subscribe(
         (res: PaginatedResult<User[]>) => {
            this.users = res.result;
