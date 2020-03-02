@@ -40,6 +40,7 @@ namespace DatingApp.API.Controllers
 
             var users = await _repo.GetUsers(userParams);
             var usersToReturn = _mapper.Map<IEnumerable<UserForListDTO>>(users);
+            Response.AddPagination(users.CurrentPage, users.PageSize, users.TotalCount, users.TotalPages);
             return Ok(usersToReturn);
         }
 
@@ -56,7 +57,7 @@ namespace DatingApp.API.Controllers
          {
              if(id != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
                 return Unauthorized();
-             
+              
              var userFromRepo = await _repo.GetUser(id);
 
              _mapper.Map(userForUpdateDTO, userFromRepo);

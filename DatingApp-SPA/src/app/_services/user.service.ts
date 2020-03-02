@@ -4,7 +4,8 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from '../_models/user';
 import {JwtHelperService} from '@auth0/angular-jwt';
-
+import { PaginatedResult } from '../_models/pagination';
+import { map } from 'rxjs/operators';
 
 
 @Injectable({
@@ -18,9 +19,12 @@ export class UserService {
 
 
 
-  getUsers(userParams?, likesParam?): Observable<User[]> {
+  getUsers(userParams?, likesParam?): Observable<PaginatedResult<User[]> {
+
+    const paginatedResult: PaginatedResult<User []> = new PaginatedResult<User[]>();
 
     let params = new HttpParams();
+
 
     if (userParams != null) {
       params = params.append('minAge', userParams.minAge);
@@ -35,7 +39,16 @@ export class UserService {
       params = params.append('likees', 'true');
     }
 
-    return this.http.get<User[]>(this.baseUrl + 'users', {params});
+    return this.http.get<User[]>(this.baseUrl + 'users', {observe: 'response', params})
+      .pipe(
+        map(response => {
+          paginatedResult.result = response.body;
+          if(response.headers.get('Pagination') != null) {
+            paginatedResult.pagination = JSON.parse(response.headers.get('Pagination'));
+          }
+          return paginatedResult;
+        })
+      )
   }
 
 
