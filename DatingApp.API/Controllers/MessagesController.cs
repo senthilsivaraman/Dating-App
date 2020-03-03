@@ -58,6 +58,17 @@ namespace DatingApp.API.Controllers
 
 
 
+         [HttpGet("thread/{recipientId}")]
+        public async Task<IActionResult> GetMessagesThread(int userId, int recipientId)
+        {
+            if(userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
+                return Unauthorized(); 
+            var messageFromRepo = await _repo.GetMessagesThread(userId, recipientId);
+            var messageThread = _mapper.Map<IEnumerable<MessageToReturnDTO>>(messageFromRepo);
+            return Ok(messageThread);
+
+        }
+
 
         [HttpPost]
         public async Task<IActionResult> CreateMessage(int userId, MessageForCreationDTO msgCrestionDTO)
