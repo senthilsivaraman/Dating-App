@@ -14,8 +14,10 @@ import { Pagination, PaginatedResult } from '../_models/pagination';
 export class ListsComponent implements OnInit {
 
   users: User[];
-  pagination: Pagination;
+  user: User = JSON.parse(localStorage.getItem('user'));
   likesParam: string;
+  pagination: Pagination;
+
 
   constructor(private authService: AuthService, private userService: UserService,
               private alertify: AlertifyService, private route: ActivatedRoute)  { }
@@ -41,17 +43,11 @@ export class ListsComponent implements OnInit {
         });
   }
 
+
   pageChanged(event: any): void {
     this.pagination.currentPage = event.page;
     this.loadUsers();
   }
 
-  resetLikes() {
-
-  }
-
-  resetLikers() {
-
-  }
 
 }

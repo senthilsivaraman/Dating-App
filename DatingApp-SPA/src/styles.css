@@ -87,3 +87,15 @@ button.btn-heart:hover {
   opacity: 0.8;
 }
 
+.page-item.active .page-link {
+  z-index: 3;
+  color: #fff;
+  background-color:rgb(241, 18, 134);
+  border-color:rgb(241, 18, 134);
+}
+
+.page-link {
+
+  color: rgb(241, 18, 134);
+}
+

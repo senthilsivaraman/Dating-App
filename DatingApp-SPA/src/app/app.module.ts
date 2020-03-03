@@ -73,6 +73,7 @@ export class CustomHammerConfig extends HammerGestureConfig  {
    BsDropdownModule.forRoot(),
    PaginationModule.forRoot(),
    TabsModule.forRoot(),
+   ButtonsModule,
    BrowserAnimationsModule,
    RouterModule.forRoot(appRoutes),
    NgxGalleryModule,
