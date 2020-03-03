@@ -44,7 +44,7 @@ namespace DatingApp.API.Controllers
 
 
         [HttpGet]
-        public async Task<IActionResult> GetMessagesForUser(int userId, MessageParams messageParams)
+        public async Task<IActionResult> GetMessagesForUser(int userId, [FromQuery]MessageParams messageParams)
         { 
             if(userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
                 return Unauthorized(); 
@@ -92,7 +92,7 @@ namespace DatingApp.API.Controllers
             if(await _repo.SaveAll())
                 return CreatedAtRoute("GetMessage", new {userId, id = message.Id}, messageToReturn);
 
-            throw new Exception("Creatin the message failed");
+            throw new Exception("Message creation failed");
         }
     }
 }

@@ -15,7 +15,6 @@ namespace DatingApp.API.Models
         public DateTime DateOfBirth { get; set; } 
         public DateTime AccCreated { get; set; }    
         public DateTime LastSeen { get; set; }  
-        public ICollection<Photo> Photos { get; set; }
 
         public string CurrentCity { get; set; }
         public string RaisedCity { get; set; }
@@ -25,6 +24,7 @@ namespace DatingApp.API.Models
         public string LookingFor { get; set; }
         public string InterestedIn { get; set; }
 
+        public ICollection<Photo> Photos { get; set; }
         public ICollection<Like> Likers { get; set; }
         public ICollection<Like> Likees { get; set; }
         public ICollection<Message> MessagesSent { get; set; }
