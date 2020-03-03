@@ -8,7 +8,7 @@
 
 
 .bg-primary {
-  background-color: rgb(241, 18, 134) !important;
+  background-color: #ff4e56 !important;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -33,7 +33,7 @@ a {
   }
   
   .nav-tabs > li.open, .member-tabset > .nav-tabs > li:hover {
-    border-bottom: 4px solid rgb(241, 18, 134);
+    border-bottom: 4px solid #ff4e56;
   }
   
   .member-tabset > .nav-tabs > li.open > a, .member-tabset > .nav-tabs > li:hover > a {
@@ -51,7 +51,7 @@ a {
   }
   
   .member-tabset > .nav-tabs > li.active {
-    border-bottom: 4px solid rgb(241, 18, 134);
+    border-bottom: 4px solid #ff4e56;
     position: relative;
   }
   
@@ -73,7 +73,7 @@ a {
   }
 
   button.btn {
-    background: rgb(241, 18, 134);
+    background: #ff4e56;
     color: white;
 }
 
@@ -90,12 +90,15 @@ button.btn-heart:hover {
 .page-item.active .page-link {
   z-index: 3;
   color: #fff;
-  background-color:rgb(241, 18, 134);
-  border-color:rgb(241, 18, 134);
+  background-color:#ff4e56;
+  border-color: #ff4e56;
 }
 
 .page-link {
 
-  color: rgb(241, 18, 134);
+  color: #ff4e56;
 }
 
+.btn-success {
+  border-color: #ff4e56;
+}

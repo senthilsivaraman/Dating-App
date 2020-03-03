@@ -25,9 +25,8 @@ export const appRoutes: Routes = [
                 resolve: {user: MemberDetailResolver}},
             { path: 'member/edit', component: MemberEditComponent,
                 resolve: {user: MemberEditResolver}, canDeactivate: [PreventUnsavedChanges]},
-            { path: 'matches', component: ListsComponent},
             { path: 'messages', component: MessagesComponent},
-            { path: 'lists', component: ListsResolver, resolve: {users: ListsResolver}},
+            { path: 'matches', component: ListsComponent, resolve: {users: ListsResolver}},
         ]
     },
     {path: '**', redirectTo: 'home', pathMatch: 'full'}
