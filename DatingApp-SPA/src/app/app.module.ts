@@ -34,6 +34,7 @@ import { MemberEditComponent } from './Members/member-edit/member-edit.component
 import { PhotoEditorComponent } from './Members/photo-editor/photo-editor.component';
 import { ListsResolver } from './_resolver/lists.resolver';
 import { MessagesResolver } from './_resolver/messages.resolver';
+import { MemberMessagesComponent } from './members/member-messages/member-messages.component';
 
 
 
@@ -63,7 +64,8 @@ export class CustomHammerConfig extends HammerGestureConfig  {
     MemberDetailComponent,
     MemberEditComponent,
     PhotoEditorComponent,
-    TimeAgoPipe
+    TimeAgoPipe,
+    MemberMessagesComponent
   ],
   imports: [
    BrowserModule,

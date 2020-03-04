@@ -1,0 +1,36 @@
+.card {
+    border: none;
+}
+
+.chat {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.chat li {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted greenyellow;
+}
+
+.rounded-circle {
+    height: 50px;
+    width: 50px;
+}
+
+.card-body {
+    overflow-y: scroll;
+    height: 400px;
+}
+
+.you {
+    background: ivory;
+    width: 50%;
+}
+
+.yourinterest {
+    background: ivory;
+    width: 50%;
+    margin-left: 330px;
+}

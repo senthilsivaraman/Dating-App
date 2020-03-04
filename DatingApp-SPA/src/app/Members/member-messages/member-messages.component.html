@@ -1,0 +1,59 @@
+<div class="card">
+    <div class="card-body">
+        <div *ngIf="messages?.length === 0">
+            <p>No Messages yet. Say Hi to let them know your interst</p>
+        </div>
+   
+    
+    <ul class="chat">
+        <li *ngFor="let message of messages.slice().reverse()">
+            <!-- to them-->
+            <div class="yourinterest" *ngIf="message.senderId == recipientId">
+                <div class="chat-body">
+                    <div class="header">
+                        <strong class="primary-font">{{message.senderName | titlecase}}</strong>
+                        <p class="text-justify ml-2">{{message.content}} 
+                            <small class="text-muted ">
+                                <span class="fa fa-clock-o ml-5 float-right">{{message.messageSentTime | timeAgo}}</span>
+                            </small>
+                         </p>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!--to me-->
+            <div class="you" *ngIf="message.senderId != recipientId">
+                <div class="chat-body">
+                    <div class="header">
+                        <p class="text-justify ml-2"> {{message.content}} </p>
+                        <strong class="primary-font">You</strong>
+                            <small class="text-muted float-right">
+                                <span class="fa fa-clock-o ml-5">{{message.messageSentTime | timeAgo}}</span>
+                                <span *ngIf="!message.isRead" class="text-danger">(unread)</span>
+                                <span *ngIf="message.isRead" class="text-success">(Read{{message.messgaeReadTime | timeAgo}})</span>
+                            </small>
+                    </div>
+                </div>
+            </div>
+
+
+        </li>
+    </ul> 
+    </div>
+
+
+    <div class="card-footer">
+        <form action="">
+            <div class="input-group">
+                <input type="text" class="form-control input-sm" placeholder="Send a message">
+                <div class="input-group-append">
+                    <button class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+</div>
+
