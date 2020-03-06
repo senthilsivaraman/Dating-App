@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Message } from '../_models/message';
-import { Pagination, PaginatedResult } from '../_models/pagination';
+import { Pagination, PaginatedResult } from 'src/app/_models/pagination';
 import { UserService } from '../_services/user.service';
 import { AuthService } from '../_services/auth.service';
 import { ActivatedRoute } from '@angular/router';

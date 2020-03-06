@@ -26,13 +26,13 @@
             <div class="you" *ngIf="message.senderId != recipientId">
                 <div class="chat-body">
                     <div class="header">
-                        <p class="text-justify ml-2"> {{message.content}} </p>
                         <strong class="primary-font">You</strong>
                             <small class="text-muted float-right">
                                 <span class="fa fa-clock-o ml-5">{{message.messageSentTime | timeAgo}}</span>
                                 <span *ngIf="!message.isRead" class="text-danger">(unread)</span>
                                 <span *ngIf="message.isRead" class="text-success">(Read{{message.messgaeReadTime | timeAgo}})</span>
                             </small>
+                            <p class="text-justify ml-2"> {{message.content}} </p>
                     </div>
                 </div>
             </div>
