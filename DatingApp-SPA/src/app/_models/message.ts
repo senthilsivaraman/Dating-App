@@ -7,7 +7,7 @@ export interface Message {
     recipientName: string;
     recipientPhotoUrl: string;
     content: string;
-    isRead: string;
+    isRead: boolean;
     messgaeReadTime: Date;
     messageSentTime: Date;
 
