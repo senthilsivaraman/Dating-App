@@ -11,7 +11,7 @@
             <div class="yourinterest" *ngIf="message.senderId == recipientId">
                 <div class="chat-body">
                     <div class="header">
-                        <strong class="primary-font">{{message.senderName | titlecase}}</strong>
+                        <strong class="primary-font">{{message.senderName| titlecase}}</strong>
                         <p class="text-justify ml-2">{{message.content}} 
                             <small class="text-muted ">
                                 <span class="fa fa-clock-o ml-5 float-right">{{message.messageSentTime | timeAgo}}</span>
