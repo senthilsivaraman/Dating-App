@@ -12,12 +12,12 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
 
   registerMode = false;
-  values: any;
+
   model: any = {};
   constructor(private http: HttpClient, public authService: AuthService, private alertify: AlertifyService, private router: Router) { }
 
   ngOnInit() {
-    this.getValues();
+    
   }
 
 
@@ -40,13 +40,6 @@ export class HomeComponent implements OnInit {
     this.registerMode = true;
   }
 
-  getValues() {
-    this.http.get('http://localhost:5000/api/values').subscribe (response => {
-      this.values = response;
-  }, error => {
-    console.log(error);
-  });
-  }
 
   cancelRegisterMode(registerMode: boolean) {
     this.registerMode = registerMode;
