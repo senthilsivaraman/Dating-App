@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Senthilkumar\\Documents\\GitHub\\Dating-App\\datingapp.api\\DatingApp.API.csproj": {}
+    "C:\\Users\\Senthilkumar\\Documents\\GitHub\\Dating-App\\DatingApp.API\\DatingApp.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Senthilkumar\\Documents\\GitHub\\Dating-App\\datingapp.api\\DatingApp.API.csproj": {
+    "C:\\Users\\Senthilkumar\\Documents\\GitHub\\Dating-App\\DatingApp.API\\DatingApp.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Senthilkumar\\Documents\\GitHub\\Dating-App\\datingapp.api\\DatingApp.API.csproj",
+        "projectUniqueName": "C:\\Users\\Senthilkumar\\Documents\\GitHub\\Dating-App\\DatingApp.API\\DatingApp.API.csproj",
         "projectName": "DatingApp.API",
-        "projectPath": "C:\\Users\\Senthilkumar\\Documents\\GitHub\\Dating-App\\datingapp.api\\DatingApp.API.csproj",
+        "projectPath": "C:\\Users\\Senthilkumar\\Documents\\GitHub\\Dating-App\\DatingApp.API\\DatingApp.API.csproj",
         "packagesPath": "C:\\Users\\Senthilkumar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Senthilkumar\\Documents\\GitHub\\Dating-App\\datingapp.api\\obj\\",
+        "outputPath": "C:\\Users\\Senthilkumar\\Documents\\GitHub\\Dating-App\\DatingApp.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -57,10 +57,6 @@
               "version": "[3.1.0, )"
             },
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
-              "target": "Package",
-              "version": "[3.1.0, )"
-            },
-            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
               "version": "[3.1.0, )"
             },
