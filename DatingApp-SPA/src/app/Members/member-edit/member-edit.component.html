@@ -16,7 +16,7 @@
             <div class="card-body">
                 <div>
                     <strong>Location:</strong>
-                      <p>{{user.currentCity}}</p>
+                      <p>{{user.currentCity | titlecase}}</p>
                 </div>
                 <div>
                     <strong>Age:</strong>
@@ -41,29 +41,74 @@
                 <tabset class="member-tabset">
                     <tab heading="Edit Profile">
                         <form #editForm="ngForm" id="editForm" (ngSubmit)="updateUser()">
-                            <h4>Bio</h4>
+                            
+                            <label for="bio">Bio</label>
                             <textarea name="bio" rows="6" class="form-control"
                                 [(ngModel)]="user.bio"></textarea>     
                                 <!-- [(ngModel)]="user.property" name="property" -->
-                            <h4>Current City</h4>
+                            
+                            <label for="currentCity">Current City</label>
                             <input type="text"  name="currentCity" rows="6" class="form-control"
                             [(ngModel)]="user.currentCity">
-                            <h4>Raised City</h4>
+
+                            <label for="raisedCity">Raised City</label>
                             <input type="text"  name="raisedCity" rows="6" class="form-control"
                             [(ngModel)]="user.raisedCity">
-                            <h4>Religion</h4>
-                            <input type="text"  name="religion" rows="6" class="form-control"
-                            [(ngModel)]="user.religion">
-                            <h4>Relationship Status</h4>
-                            <input type="text"  name="relationshipStatus" rows="6" class="form-control"
-                            [(ngModel)]="user.relationshipStatus">
-                            <h4>Looking For</h4>
-                            <input type="text"  name="lookingFor" rows="6" class="form-control"
-                            [(ngModel)]="user.lookingFor">
-                            <h4>Interested In</h4>
-                            <input type="text"  name="interestedIn" rows="6" class="form-control"
-                            [(ngModel)]="user.interestedIn">
-                            <h4>Email</h4>
+                            
+                            
+
+                            <label for="religion">Religion</label>
+                            <select id="religion" name="religion" rows="6"
+                                [(ngModel)]="user.religion" class="form-control">
+                                <option value="Atheist">Atheist</option>
+                                <option value="Buddhist">Buddhist</option>
+                                <option value="Christian">Christian</option>
+                                <option value="Hindu">Hindu</option>
+                                <option value="Jain">Jain</option>
+                                <option value="Jewish">Jewish</option>
+                                <option value="Muslim">Muslim</option>
+                                <option value="Sikh">Sikh</option>
+                                <option value="Spritual">Spritual</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            
+                            <label for="relationshipStatus">Relationship Status</label>
+                            <select id="relationshipStatus" name="relationshipStatus" rows="6"
+                                [(ngModel)]="user.relationshipStatus" class="form-control">
+                                <option value="Single">Single</option>
+                                <option value="In a Relationship">In a Relationship</option>
+                                <option value="In an open Relationship">In an open relationship</option>
+                                <option value="Engaged">Engaged</option>
+                                <option value="Married">Married</option>
+                                <option value="Single Parent">Single Parent</option>
+                                <option value="Divorved">Divorved</option>
+                                <option value="Widowed">Widowed</option>
+                            </select>
+
+
+                            <label for="lookingFor">Looking For</label>
+                            <select id="lookingFor" name="lookingFor" rows="6"
+                                [(ngModel)]="user.lookingFor" class="form-control">
+                                <option value="Relationship">Relationship</option>
+                                <option value="Something Casual">Something Casual</option>
+                                <option value="Marriage">Marriage</option>
+                                <option value="dont know">Don't know yet</option>
+                            </select>
+                           
+                            
+                            <label for="interestedIn">Interested In</label>
+                            <div class="custom-control custom-radio">
+                                <input id="male" type="radio" class="custom-control-input" value="male" name="gender"[(ngModel)]="user.interestedIn">
+                                <label class="custom-control-label" for="male">Male</label>
+                            </div>
+    
+                            <div class="custom-control custom-radio">
+                                <input id="female" type="radio" class="custom-control-input" value="female" name="gender" [(ngModel)]="user.interestedIn">
+                            <label class="custom-control-label" for="female">Female</label>
+                            </div>
+
+
+                            <label for="email">Email</label>
                             <input type="email"  name="email" rows="6" class="form-control"
                             [(ngModel)]="user.email">
                         </form>

@@ -19,13 +19,14 @@ export class MemberEditComponent implements OnInit {
   photoUrl: string;
   @HostListener('window: beforeunload', ['$event'])
   unloadNotification($event: any) {
-    if(this.editForm.dirty) {
+    if (this.editForm.dirty) {
       $event.returnValue = true;
     }
   }
-  // Host Listner decorator has ability to listen to host(browser) and take action depands (preventing the tab close) 
-  
-  constructor(private route: ActivatedRoute, private alertify: AlertifyService, private userService: UserService, private authService: AuthService) { }
+  // Host Listner decorator has ability to listen to host(browser) and take action depands (preventing the tab close)
+
+  constructor(private route: ActivatedRoute, private alertify: AlertifyService, private userService: UserService,
+              private authService: AuthService) { }
 
 
     ngOnInit() {
@@ -42,7 +43,7 @@ export class MemberEditComponent implements OnInit {
         }, error => {
           this.alertify.error(error);
         });
-        
+
   }
 
   updateMainPhoto(photoUrl) {
