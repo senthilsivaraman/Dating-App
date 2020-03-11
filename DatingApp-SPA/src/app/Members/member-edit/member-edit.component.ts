@@ -5,6 +5,7 @@ import { AlertifyService } from 'src/app/_services/alertify.service';
 import { NgForm } from '@angular/forms';
 import { UserService } from 'src/app/_services/user.service';
 import { AuthService } from 'src/app/_services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-member-edit',
@@ -26,7 +27,7 @@ export class MemberEditComponent implements OnInit {
   // Host Listner decorator has ability to listen to host(browser) and take action depands (preventing the tab close)
 
   constructor(private route: ActivatedRoute, private alertify: AlertifyService, private userService: UserService,
-              private authService: AuthService) { }
+              private authService: AuthService, private router: Router) { }
 
 
     ngOnInit() {
@@ -45,6 +46,7 @@ export class MemberEditComponent implements OnInit {
         });
 
   }
+
 
   updateMainPhoto(photoUrl) {
     this.user.photoUrl = photoUrl;
