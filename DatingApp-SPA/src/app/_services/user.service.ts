@@ -37,6 +37,10 @@ export class UserService {
       params = params.append('orderBy', userParams.orderBy );
     }
 
+    if (likesParam === 'Matches') {
+      params = params.append('matches', 'true');
+    }
+
     if (likesParam === 'Likers') {
       params = params.append('likers', 'true');
     }
